@@ -10,6 +10,7 @@ export default defineConfig({
     lib: {
       entry: {
         app: "src/main.ts",
+        backgroundScript: "src/background-script/index.ts",
         contentScript: "src/content-script/index.ts",
         inpageScript: "src/inpage-script/index.ts",
       },
@@ -19,6 +20,8 @@ export default defineConfig({
           return "content-script.js";
         } else if (entryName === "inpageScript") {
           return "inpage-script.js";
+        } else if (entryName === "backgroundScript") {
+          return "background-script.js";
         } else {
           return "sphinx.js";
         }

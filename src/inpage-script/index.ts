@@ -5,3 +5,5 @@ if (document.currentScript) {
 } else {
   console.warn("Coudld not find a Sphinx Provider");
 }
+
+export {};

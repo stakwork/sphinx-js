@@ -3,5 +3,10 @@ export default class SphinxProvider {
 
   constructor() {
     console.log("SphinxProvider constructor", this.name);
+
+    window.postMessage(
+      { type: "SPHINX_PROVIDER", text: "Hello from the world of tomorrow!" },
+      "*"
+    );
   }
 }
