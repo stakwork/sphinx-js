@@ -1,5 +1,10 @@
 <!-- src/App.svelte -->
 <script lang="ts">
+  chrome.runtime.sendMessage({
+    type: "SPINX_POPUP",
+    text: 'Hello from the popup!',
+  }).then((response) => {console.log(response)});
+
   let name = 'Sphinx';
 </script>
 
