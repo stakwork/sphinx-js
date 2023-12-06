@@ -1,6 +1,6 @@
 # SPHINX JS
 
-A browser extension for the Sphinx app
+A browser extension to add content to Second Brains. 
 
 ## Getting Started
 
