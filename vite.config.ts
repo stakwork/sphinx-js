@@ -7,6 +7,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 export default defineConfig({
   plugins: [svelte(), tsconfigPaths()],
   build: {
+    emptyOutDir: true,
     lib: {
       entry: {
         app: "src/main.ts",
