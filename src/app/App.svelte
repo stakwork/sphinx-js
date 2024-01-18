@@ -1,8 +1,9 @@
 <!-- src/App.svelte -->
 <script lang="ts">
+  import { pattern } from "svelte-pathfinder";
   import SbLogo from './assets/second-brain.svelte'
-  import Plus from './assets/plus.svelte'
-  import Button from './components/Button.svelte'
+  import Empty from "./routes/Empty.svelte";
+  import AddForm from "./routes/AddBrain/AddForm.svelte";
 
   chrome.runtime.sendMessage({
     type: "SPINX_POPUP",
@@ -17,10 +18,10 @@
     <SbLogo />
   </header>
   <content class="flex flex-1 flex-col px-5">
-    <div class="flex flex-col text-center pt-20">
-      <h1 class="text-[#F5F5F5] text-xl text-center mb-9">Hello! 👋</h1>
-      <p class="mb-11 text-sm font-normal">Add your first SecondBrain<br /> by entering the URL below and<br /> pay 10 sats to contribute content!</p>
-      <Button variant='primary' on:click={()=>console.log("Clicked")}><Plus /> Add a Second Brain</Button>
-    </div>
+    {#if $pattern('/add-brain')}
+      <svelte:component this={AddForm} />
+    {:else if $pattern('/')}
+      <svelte:component this={Empty} />
+    {/if}
   </content>
 </main>

@@ -10,7 +10,7 @@ export default defineConfig({
     emptyOutDir: true,
     lib: {
       entry: {
-        app: "src/main.ts",
+        app: "src/app/main.ts",
         backgroundScript: "src/background-script/index.ts",
         contentScript: "src/content-script/index.ts",
         inpageScript: "src/inpage-script/index.ts",
