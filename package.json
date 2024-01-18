@@ -4,7 +4,7 @@
   "description": "Sphinx Browser Extension",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --watch",
+    "build": "vite build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module",
@@ -27,5 +27,8 @@
     "vite": "^5.0.2",
     "vite-tsconfig-paths": "^4.2.1",
     "webextension-polyfill": "^0.10.0"
+  },
+  "dependencies": {
+    "svelte-pathfinder": "^4.7.1"
   }
 }
