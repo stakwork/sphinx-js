@@ -1,22 +1,38 @@
-# SPHINX JS
+# create-svelte
 
-A browser extension for the Sphinx app
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
 
-## Getting Started
+## Creating a project
 
-1. clone the repo
-1. `> cd sphinx-js`
-1. `> npm i`
-1. `> npm run build`
-1. Open chrome web browser and create a new tab, in the url bar type `chrome://extensions/` and hit enter.
-1. In the extensions window toggle "Developer mode" on in the upper right corner.
-1. Click the "Load unpacked" button in the upper left corner of the window. Navigate to the `dist` directory in this project and click open or select.
-1. You'll see the Sphinx extension listed in the window. The extension may need to be pinned to your chrome toolbar by clicking the extension "puzzle piece" icon on the browser bar and clicking the pin icon next to the Sphinx extension.
+If you're seeing this, you've probably already done this step. Congrats!
 
-### Popup
+```bash
+# create a new project in the current directory
+npm create svelte@latest
 
-You can now click the Sphinx icon in the browser and see the popup browser action. To make code changes, edit `src/App.svelte` and the extension will automatically rebuild the app with your changes. You can hit the refresh icon on the Sphinx extension listing in `chrome://extensions/` and you'll see your changes when you click into the browser action popup again.
+# create a new project in my-app
+npm create svelte@latest my-app
+```
 
-### Content Script
+## Developing
 
-A content script executes javascript on the websites that you visit. To test that it's working, after installing the extension, go to any website and open the javascript console (option + command + j). In the console you can type `window.sphinx` and hit return. You'll see that the object exists and looks like this `{ name: 'Sphinx' }`
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+
+```bash
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
+## Building
+
+To create a production version of your app:
+
+```bash
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.

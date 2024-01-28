@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 body {
-  @apply text-white;
+	@apply text-white;
 }
 
 h1 {
-  @apply text-base;
+	@apply text-base;
 }

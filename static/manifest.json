@@ -1,0 +1,37 @@
+{
+	"manifest_version": 3,
+	"name": "Sphinx Browser Extension",
+	"version": "0.0.1",
+	"description": "Decentralize social media, and take back your data.",
+	"action": {
+		"default_popup": "index.html",
+		"default_icon": {
+			"16": "icon.png",
+			"48": "icon.png",
+			"128": "icon.png"
+		}
+	},
+	"background": {
+		"service_worker": "background.js",
+		"type": "module"
+	},
+	"content_scripts": [
+		{
+			"matches": ["http://*/*", "https://*/*"],
+			"run_at": "document_start",
+			"js": ["content.js"]
+		}
+	],
+	"web_accessible_resources": [
+		{
+			"resources": ["inpage.js"],
+			"matches": ["<all_urls>"]
+		}
+	],
+	"icons": {
+		"16": "icon.png",
+		"48": "icon.png",
+		"128": "icon.png"
+	},
+	"permissions": ["activeTab"]
+}
