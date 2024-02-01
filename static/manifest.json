@@ -33,5 +33,5 @@
 		"48": "icon.png",
 		"128": "icon.png"
 	},
-	"permissions": ["activeTab"]
+	"permissions": ["activeTab", "storage"]
 }
