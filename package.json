@@ -36,6 +36,12 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@types/chrome": "^0.0.260",
 		"webextension-polyfill": "^0.10.0"
+	},
+	"overrides": {
+		"vite": {
+			"rollup": "npm:@rollup/wasm-node"
+		}
 	}
 }

@@ -8,6 +8,7 @@ export default {
 		extend: {
 			colors: {
 				primaryBlue: '#618AFF',
+				disabledButtonBg: '#30334280',
 				bg: {
 					1: '#23252F',
 					2: '#101116',
